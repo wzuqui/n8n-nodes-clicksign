@@ -5,6 +5,19 @@ import { addRequirementFields } from '../shared/addRequirement/addRequirement.fi
 export const addRubricFields: INodeProperties[] = [
   ...addRequirementFields('addRubric'),
   {
+    displayName: 'Rubric field',
+    name: 'rubric_field',
+    type: 'string',
+    default: '',
+    required: false,
+    displayOptions: {
+      show: {
+        operation: ['addRubric'],
+        resource: ['requirement'],
+      },
+    },
+  },
+  {
     displayName: 'Pages',
     name: 'pages',
     type: 'string',
